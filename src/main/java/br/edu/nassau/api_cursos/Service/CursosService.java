@@ -15,6 +15,14 @@ public class CursosService {
     }
 
     public CursosModel cadastrar(CursosModel cursosModel){
+        if (cursosModel.getNome() == null || cursosModel.getNome().isBlank()) {
+            throw new IllegalArgumentException("O nome do curso é obrigatório!");
+        }
+
+        if (cursosModel.getCargaHoraria() == null || cursosModel.getCargaHoraria() <= 0) {
+            throw new IllegalArgumentException("A carga horária deve ser maior que zero!");
+        }
+
         return cursosRepository.cadastrar(cursosModel);
     }
 
@@ -27,6 +35,13 @@ public class CursosService {
     }
 
     public CursosModel atualizar(Long id, CursosModel cursosModel){
+        if (cursosModel.getNome() == null || cursosModel.getNome().isBlank()) {
+            throw new IllegalArgumentException("O nome do curso é obrigatório!");
+        }
+
+        if (cursosModel.getCargaHoraria() == null || cursosModel.getCargaHoraria() <= 0) {
+            throw new IllegalArgumentException("A carga horária deve ser maior que zero!");
+        }
         return cursosRepository.atualizar(id, cursosModel);
     }
 
