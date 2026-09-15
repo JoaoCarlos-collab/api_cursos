@@ -28,3 +28,37 @@ A API oferece os seguintes endpoints para consumo externo:
 * **GET /cursos/{id}** — Busca os dados de um curso específico pelo identificador.
 * **PUT /cursos/{id}** — Atualiza as informações de um curso existente.
 * **DELETE /cursos/{id}** — Remove um curso do banco de dados.
+
+# API Cursos
+
+API REST desenvolvida em Java com Spring Boot para o gerenciamento de cursos, parte da atividade acadêmica da faculdade.
+
+## 🚀 Tecnologias Utilizadas
+* **Java 21**
+* **Spring Boot**
+* **Maven**
+* **Spring Web**
+
+---
+
+## 📋 Endpoints da API
+
+Abaixo estão listadas as rotas disponíveis para consumo da API:
+
+| Método | Endpoint | Descrição |
+| :--- | :--- | :--- |
+| **POST** | `/cadastrar` | Cadastra um novo curso no sistema |
+| **GET** | `/listar` | Retorna a lista com todos os cursos cadastrados |
+| **GET** | `/buscarId/{id}` | Busca um curso específico informando o ID |
+| **PUT** | `/atualizar/{id}` | Atualiza os dados de um curso existente pelo ID |
+| **DELETE** | `/deletar/{id}` | Remove um curso do sistema pelo ID |
+
+---
+
+## 🛠️ Como Executar o Projeto
+
+1. Clone este repositório em sua máquina.
+2. Abra o projeto na sua IDE (recomendo o **IntelliJ IDEA**).
+3. Aguarde o **Maven** carregar todas as dependências.
+4. Execute a classe principal `ApiCursosApplication`.
+5. A API estará rodando localmente na porta **8080** (`http://localhost:8080`).
