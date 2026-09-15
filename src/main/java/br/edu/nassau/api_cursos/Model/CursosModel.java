@@ -1,6 +1,12 @@
 package br.edu.nassau.api_cursos.Model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "cursos")
 public class CursosModel {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private Integer cargaHoraria;

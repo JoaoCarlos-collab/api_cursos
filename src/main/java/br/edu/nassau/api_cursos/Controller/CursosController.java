@@ -34,8 +34,8 @@ public class CursosController {
     }
 
     @DeleteMapping("/deletar/{id}")
-    public boolean deletar(@PathVariable Long id){
-        return cursosService.remover(id);
+    public void deletar(@PathVariable Long id){
+        cursosService.deletar(id);
     }
 
 

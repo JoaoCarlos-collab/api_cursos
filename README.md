@@ -36,6 +36,8 @@ API REST desenvolvida em Java com Spring Boot para o gerenciamento de cursos, pa
 ## 🚀 Tecnologias Utilizadas
 * **Java 21**
 * **Spring Boot**
+* **Spring Data JPA / Hibernate**
+* **PostgreSQL**
 * **Maven**
 * **Spring Web**
 
@@ -62,3 +64,17 @@ Abaixo estão listadas as rotas disponíveis para consumo da API:
 3. Aguarde o **Maven** carregar todas as dependências.
 4. Execute a classe principal `ApiCursosApplication`.
 5. A API estará rodando localmente na porta **8080** (`http://localhost:8080`).
+
+## ⚙️ Pré-requisitos
+Antes de executar a aplicação, certifique-se de ter:
+1. O **PostgreSQL** instalado e rodando em sua máquina.
+2. Um banco de dados criado com o nome `api_cursos`.
+
+No seu arquivo `src/main/resources/application.properties`, configure suas credenciais:
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/api_cursos
+spring.datasource.username=postgres
+spring.datasource.password=sua_senha_aqui
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
